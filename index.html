@@ -77,6 +77,15 @@
   .brand .emblem{width:26px;height:26px;flex:none}
   .brand .emblem img{width:100%;height:100%;display:block;object-fit:contain}
   .brand-name{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.3em;color:var(--text)}
+  .status-btn{
+    margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;
+    background:var(--panel);border:1px solid var(--border);border-radius:999px;
+    padding:8px 16px;transition:all .25s ease;user-select:none;
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .status-btn:hover{color:var(--text);border-color:var(--border-strong);transform:translateY(-1px)}
+  .status-btn .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2.2s infinite}
 
   /* ---------- layout ---------- */
   main{max-width:1200px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
@@ -116,11 +125,9 @@
     font-size:clamp(60px,13vw,136px);line-height:.95;letter-spacing:.06em;
     user-select:none;cursor:pointer;position:relative;display:inline-block;
     background:linear-gradient(90deg,#8b7bff,#c084fc 22%,#38bdf8 48%,#00e5a0 74%,#8b7bff);
-    background-size:200% 100%;
+    background-size:100% 100%;
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
-    animation:gradmove 9s linear infinite;
   }
-  @keyframes gradmove{to{background-position:200% 0}}
   .wordmark .ch{display:inline-block;will-change:transform}
   .tagline{margin:26px auto 0;max-width:520px;color:var(--muted);font-size:clamp(14px,2vw,16.5px);line-height:1.7;font-weight:400}
   .tagline b{color:var(--text);font-weight:500}
@@ -230,6 +237,7 @@
     <span class="emblem"><img src="sputnik.webp" alt="SPUTNK"></span>
     <span class="brand-name">SPUTNK</span>
   </div>
+  <a class="status-btn" href="https://status.sputnk.net" target="_blank" rel="noopener"><span class="dot"></span>Statut</a>
 </nav>
 
 <main>
